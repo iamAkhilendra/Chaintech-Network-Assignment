@@ -1,0 +1,97 @@
+
+#create-account-page {
+    width: clamp(0rem, 70%, 27rem);
+    aspect-ratio: calc(1/1.5);
+    background: white;
+
+    border-radius: 0.5rem;
+
+    box-sizing: border-box;
+    padding: 1.5rem;
+
+    container-type: inline-size;
+}
+
+#create-account-page-form {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#create-account-page-heading {
+    width: 100%;
+    text-align: center;
+}
+
+#create-account-page-heading h2 {
+    margin: 0;
+    font-size: 8cqi;
+}
+
+.create-account-page-input-fields-div {
+    position: relative;
+    width: 100%;
+}
+
+.create-account-page-input-fields {
+    width: 100%;
+    font-size: 4.5cqi;
+    padding: 0 2cqi;
+    box-sizing: border-box;
+    height: 12cqi;
+
+    outline: none;
+}
+
+.create-account-page-input-fields-label {
+    position: absolute;
+    top: 2.5cqi;
+    left: 2cqi;
+    transition: 0.2s ease;
+    background: white;
+    padding: 0 1cqi;
+}
+
+.create-account-page-input-fields:focus + .create-account-page-input-fields-label,
+.create-account-page-input-fields:not(:placeholder-shown) + .create-account-page-input-fields-label {
+    top: -2.7cqi;
+    font-size: 3.5cqi;
+}
+
+.create-account-page-input-fields:focus {
+    border: 0.45cqi solid #fa8072;
+}
+
+.create-account-page-input-fields:focus + .create-account-page-input-fields-label {
+    color: #fa8072;
+    font-weight: 500;
+}
+
+#create-account-page-confirm-password-warning,
+#create-account-page-email-warning,
+#create-account-page-name-warning,
+#create-account-page-password-too-short-warning {
+    color: red;
+    position: absolute;
+    right: 0;
+    font-size: 3.5cqi;
+    top: -4.5cqi;
+}
+
+
+#create-account-page-date-field {
+    width: 30%;
+}
+
+#create-account-create-button {
+    height: 12cqi;
+    width: 100%;
+
+    cursor: pointer;
+
+    font-size: 5cqi;
+    font-weight: 600;
+}

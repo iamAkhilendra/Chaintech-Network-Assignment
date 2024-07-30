@@ -1,0 +1,140 @@
+
+
+#user-not-logged-in-card{
+    background: white;
+    padding: 2rem 4rem;
+    text-align: center; 
+    border-radius: 0.5rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+
+    font-size: 1.3rem;
+}
+
+
+#user-not-logged-in-card > a{
+    font-size: 1rem;
+    color: white;
+    background: #007aff;
+    width: max-content;
+
+    padding: 0.7rem 1.4rem;
+    border-radius: 0.5rem;
+}
+
+#user-not-logged-in-card > a:hover {
+    background: #0051a2;
+}
+
+#profile-display-page {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient( 135deg, #d13434, #fa8072);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#profile-display-card {
+    width: 40%;
+    aspect-ratio: 1;
+    background: white;
+
+    border-radius: 0.5rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    container-type: inline-size;
+    
+    box-sizing: border-box;
+    padding: 2cqi;
+}
+
+
+#profile-card-heading > h2 {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+
+    font-size: 7cqi;
+}
+
+.profile-display-data-fields {
+    width: 100%;
+    background: white;
+    font-size: 3.5cqi;
+}
+
+.profile-display-data-fields > div{
+    display: flex;
+    align-items: baseline;
+    gap: 1cqi;
+}
+
+.buttons {
+    padding: 1cqi 2cqi;
+    font-size: 2.3cqi;
+    text-decoration: none;
+    border: none;
+    border-radius: 0.8cqi;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background 0.15s, box-shadow 0.3s;
+}
+
+:is(.apply-button, .to-edit-button) {
+    color: white;
+    background: #007aff;
+}
+
+:is(.apply-button, .to-edit-button):hover {
+    background: #0051a2;
+}
+
+.cancle-button:hover {
+    background: #d0d0d0;
+}
+
+.warning {
+    color: red;
+    font-size: 2.2cqi;
+}
+
+.edit-box {
+    display: flex;
+    flex-direction: column;
+    gap: 2cqi;
+}
+
+.edit-box > input {
+    width: 150%;
+    height: 5cqi;
+    font-size: 3cqi;
+    padding: 0.5cqi 1cqi;
+}
+
+
+.profile-display-card-content-box :nth-child(1) {
+    gap: 2.7cqi;
+    align-items: center;
+}
+
+.button-box {
+    display: flex;
+    gap: 3cqi;
+}
+
+#profile-logout-button {
+    color: red;
+    font-size: 3.5cqi;
+    font-weight: 600;
+    padding: 2cqi;
+}
+

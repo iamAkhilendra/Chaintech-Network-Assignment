@@ -1,0 +1,22 @@
+
+:root {
+    --my-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#my-app{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient( 135deg, #d13434, #fa8072);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: var(--my-font-family);
+}
