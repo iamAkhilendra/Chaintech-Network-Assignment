@@ -74,7 +74,11 @@ export default function LoginPage() {
     }
 
     // Searches for data of the user with enetered email.
-    const storedUserData = useSelector( (state) => state.userDataReducer.storeMap[Email] );
+    var storedUserData = undefined;
+
+    const storeData = useSelector( (state) => state.userDataReducer.storeMap );
+
+    if(storeData != null) storedUserData = storeData[Email];
 
 
     // Resetes every input field to dafault.

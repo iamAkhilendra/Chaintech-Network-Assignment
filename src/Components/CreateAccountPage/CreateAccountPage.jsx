@@ -32,6 +32,7 @@ export default function CreateAccountPage() {
 
     const [ isPasswordShown, setIsPasswordShown ] = useState( false );
 
+    const [ emailAlreadyExists, setEmailAlreadyExists ] = useState( false );
 
     // Removes spaces from the start of a string if there are any.
     const trimInitialSpaces = ( string ) => {
@@ -55,6 +56,7 @@ export default function CreateAccountPage() {
     // Updates Email variable.
     const handleEmailEntry = (event) => {
         setIsEmailInvalid( false );
+        setEmailAlreadyExists( false );
         var newEmail = trimInitialSpaces( event.target.value );
         setEmail( email => newEmail );
     }
@@ -131,6 +133,8 @@ export default function CreateAccountPage() {
         resetEverythingToDefault();
     }
 
+    const storeData = useSelector( (state) => state.userDataReducer.storeMap );
+
     // Handles click on create account button.
     // Resetes every input field to default and logs the user in.
     const handleCreateAccountClick = (event) => {
@@ -145,6 +149,11 @@ export default function CreateAccountPage() {
             setIsEmailInvalid( true );
             return;
         }
+
+        if( storeData != null && storeData[email] != undefined ) {
+            setEmailAlreadyExists( true );
+            return;
+        } 
 
         if( checkPasswordLongEnough() == false ) {
             setIsPasswordTooShort( true );
@@ -176,7 +185,8 @@ export default function CreateAccountPage() {
                 </div>
 
                 <div className="create-account-page-input-fields-div">
-                    <span id="create-account-page-email-warning" style={{display: isEmailInvalid ? 'block' : 'none'}}>Invalid E-mail</span>
+                    <span id='email-already-exists-warning' style={{display: emailAlreadyExists ? 'inline' : 'none'}}>Email already exists</span>
+                    <span id="create-account-page-email-warning" style={{display: isEmailInvalid ? 'inline' : 'none'}}>Invalid E-mail</span>
                     <input type="text" name="" className='create-account-page-input-fields' id="create-account-page-email-field" placeholder='' value={email} onChange={handleEmailEntry} />
                     <label className='create-account-page-input-fields-label' htmlFor="create-account-page-email-field">E-mail</label>
                 </div>

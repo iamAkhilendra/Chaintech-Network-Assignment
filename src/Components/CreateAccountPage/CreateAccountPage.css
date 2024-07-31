@@ -73,7 +73,8 @@
 #create-account-page-confirm-password-warning,
 #create-account-page-email-warning,
 #create-account-page-name-warning,
-#create-account-page-password-too-short-warning {
+#create-account-page-password-too-short-warning,
+#email-already-exists-warning {
     color: red;
     position: absolute;
     right: 0;

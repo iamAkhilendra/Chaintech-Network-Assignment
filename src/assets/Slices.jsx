@@ -4,7 +4,7 @@ import { createSlice } from "@reduxjs/toolkit";
 // Getting user data from local storage if it has data stored in it.
 var retrievedData = localStorage.getItem( 'userData' );
 
-if(retrievedData == 'undefined') {
+if(retrievedData == 'undefined' || retrievedData == null) {
     retrievedData = '{}';
 }
 
@@ -34,7 +34,7 @@ export default userDataSlice.reducer;
 // Getting logged in users Email Id if there is any user is already logged in.
 var retrievedEmail = localStorage.getItem( 'currentUserEmail' );
 
-if(retrievedEmail == 'undefined') {
+if(retrievedEmail == 'undefined' || retrievedEmail == null) {
     retrievedEmail = '';
 }
 

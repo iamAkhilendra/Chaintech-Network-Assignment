@@ -43,7 +43,11 @@ export default function ProfileDisplay() {
     // Getting Current logged in user's data from the store
     const currentLoggedInUserEmail = useSelector( (state) => state.currentLoggedInUser.userEmail );
 
-    const currentUserData = useSelector( (state) => state.userDataReducer.storeMap[currentLoggedInUserEmail]);
+
+    var currentUserData = undefined;
+    const storeData = useSelector( (state) => state.userDataReducer.storeMap );
+
+    if(storeData != null) currentUserData = storeData[currentLoggedInUserEmail];
 
     const [ isUserLoggedIn, setIsUserLoggedIn ] = useState( currentLoggedInUserEmail != '' );
 
